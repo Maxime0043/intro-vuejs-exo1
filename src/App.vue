@@ -1,20 +1,22 @@
 <script setup>
-import Compteur from "@/components/Compteur.vue";
-import DemoJWT from "@/components/DemoJWT.vue";
-import Tableau from "@/components/Tableau.vue";
-import Connexion from "@/components/Connexion.vue";
-import FormBootstrap from "@/components/FormBootstrap.vue";
 </script>
 
 <template>
   <div>
-    <!-- <Compteur /> -->
-    <!-- <hr /> -->
-    <!-- <DemoJWT /> -->
-    <!-- <hr /> -->
-    <!-- <Tableau /> -->
-    <!-- <Connexion /> -->
-    <FormBootstrap />
+    <header>
+      <nav class="text-center">
+        <RouterLink to="/">Compteur</RouterLink>
+        <RouterLink :to="{ name: 'DemoJWT' }" class="ms-3">DemoJWT</RouterLink>
+        <RouterLink :to="{ name: 'Tableau' }" class="ms-3">Tableau</RouterLink>
+        <RouterLink :to="{ name: 'Connexion' }" class="ms-3"
+          >Connexion</RouterLink
+        >
+        <RouterLink :to="{ name: 'FormBootstrap' }" class="ms-3"
+          >FormBootstrap</RouterLink
+        >
+      </nav>
+    </header>
+    <RouterView />
   </div>
 </template>
 
